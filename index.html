@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="DY — Dipindra Yadav. Student, creator and developer exploring AI, web development, programming and cybersecurity.">
+  <meta property="og:title" content="DY — Dipindra Yadav">
+  <meta property="og:description" content="Student, creator and developer exploring AI, technology, programming and cybersecurity.">
+  <meta property="og:type" content="website">
+  <title>DY — Dipindra Yadav | Student • Creator • Developer</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;--surface:rgba(255,255,255,.82);--card:#fff;--text:#101426;
+      --muted:#667085;--line:#e7e9f0;--primary:#6d5dfc;--primary2:#8f7cff;
+      --accent:#00bfa6;--shadow:0 20px 60px rgba(16,20,38,.10);--radius:24px
+    }
+    [data-theme="dark"]{
+      --bg:#070a12;--surface:rgba(13,18,32,.82);--card:#0e1423;--text:#f4f6ff;
+      --muted:#aab2c5;--line:#20283a;--shadow:0 24px 70px rgba(0,0,0,.38)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);background:radial-gradient(circle at 85% 8%,rgba(109,93,252,.16),transparent 30%),var(--bg);
+      line-height:1.65;transition:.25s}
+    a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+    .nav{position:fixed;top:16px;left:0;right:0;z-index:20}.nav-inner{height:68px;border:1px solid var(--line);
+      background:var(--surface);backdrop-filter:blur(18px);border-radius:22px;display:flex;align-items:center;
+      justify-content:space-between;padding:0 16px 0 20px;box-shadow:var(--shadow)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em}.logo{width:38px;height:38px;
+      display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));color:white}
+    .links{display:flex;gap:4px;align-items:center}.links a,.icon-btn{padding:10px 13px;border-radius:12px;color:var(--muted);font-weight:700}
+    .links a:hover,.icon-btn:hover{background:var(--line);color:var(--text)}.icon-btn{border:0;background:transparent;cursor:pointer;font-size:18px}
+    .menu{display:none}
+    .hero{padding:150px 0 80px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;
+      color:var(--muted);background:var(--surface);font-weight:800;font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:#18c99a;box-shadow:0 0 0 6px rgba(24,201,154,.12)}
+    h1{font-size:clamp(44px,7vw,82px);line-height:.98;letter-spacing:-.065em;margin:20px 0}.gradient{background:linear-gradient(110deg,var(--primary),#e75cff 45%,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:19px;color:var(--muted);max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);padding:12px 17px;border-radius:14px;font-weight:850;cursor:pointer;background:var(--card);color:var(--text)}
+    .btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;border-color:transparent}.btn:hover{transform:translateY(-2px);transition:.2s}
+    .hero-card{position:relative}.portrait-wrap{padding:12px;border-radius:34px;background:linear-gradient(145deg,rgba(109,93,252,.8),rgba(0,191,166,.5));box-shadow:var(--shadow)}
+    .portrait{display:block;width:100%;aspect-ratio:1/1.08;object-fit:cover;object-position:center 30%;border-radius:25px}
+    .floating{position:absolute;bottom:-20px;left:-25px;padding:15px 17px;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);font-weight:850}
+    section{padding:85px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+    .kicker{color:var(--primary);font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:.15em}.section-head h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.045em;margin:5px 0 0}.muted{color:var(--muted)}
+    .about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 35px rgba(16,20,38,.045)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.stat{padding:18px;border:1px solid var(--line);border-radius:18px}.stat b{font-size:28px;display:block}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:10px 13px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-weight:800}
+    .project-grid,.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project,.post{overflow:hidden}.project h3,.post h3{margin:10px 0 5px}.tag{display:inline-block;padding:6px 9px;border-radius:9px;background:rgba(109,93,252,.1);color:var(--primary);font-size:12px;font-weight:900}
+    .project-icon{height:145px;border-radius:18px;background:linear-gradient(135deg,rgba(109,93,252,.18),rgba(0,191,166,.13));display:grid;place-items:center;font-size:45px}
+    .post-cover{height:150px;border-radius:18px;background:linear-gradient(135deg,#171c31,#5b45db);display:grid;place-items:center;color:#fff;font-size:40px}
+    .post-meta{font-size:13px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}.blog-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+    input,textarea,select{width:100%;padding:13px 14px;border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:13px;outline:none;font:inherit}
+    textarea{min-height:135px;resize:vertical}.form-grid{display:grid;gap:12px}.socials{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.social{padding:10px 13px;border:1px solid var(--line);border-radius:12px;font-weight:800;color:var(--muted)}
+    footer{padding:35px 0 55px;border-top:1px solid var(--line);color:var(--muted)}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .notice{padding:12px 14px;border-radius:13px;background:rgba(0,191,166,.09);border:1px solid rgba(0,191,166,.2);color:var(--muted);font-size:13px}
+    .empty{display:none;padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:18px}
+    .backtop{position:fixed;right:18px;bottom:18px;z-index:10;display:none}.backtop.show{display:block}
+    @media(max-width:900px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.project-grid,.blog-grid{grid-template-columns:1fr 1fr}.hero{padding-top:125px}.links{display:none}.menu{display:block}}
+    @media(max-width:600px){.project-grid,.blog-grid{grid-template-columns:1fr}.nav{top:8px}.nav-inner{height:60px}.hero{padding-top:105px}.floating{left:8px}.stats{grid-template-columns:1fr}.section-head{display:block}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home"><span class="logo">DY</span><span>Dipindra Yadav</span></a>
+      <div class="links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+      </div>
+      <div>
+        <button class="icon-btn" id="theme" aria-label="Toggle theme">☾</button>
+        <button class="icon-btn menu" id="menu" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> Building • Learning • Creating</span>
+          <h1>Hi, I'm <span class="gradient">DY.</span><br>Student &amp; Developer.</h1>
+          <p class="lead">I'm Dipindra Yadav, a Grade 10 student exploring web development, app development, AI, SEO and programming — with a long-term goal of becoming a cybersecurity expert.</p>
+          <div class="actions"><a class="btn primary" href="#projects">Explore my work →</a><a class="btn" href="#contact">Let's connect</a></div>
+          <div class="socials">
+            <a class="social" href="https://github.com/dipindra-max" target="_blank" rel="noopener">GitHub</a>
+            <a class="social" href="https://www.youtube.com/@Dipindra_Yadav" target="_blank" rel="noopener">YouTube</a>
+            <a class="social" href="https://www.instagram.com/dipindrayadav" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="portrait-wrap"><img class="portrait" src="assets/profile.png" alt="Dipindra Yadav"></div>
+          <div class="floating">⚡ AI · Web · Apps · Cybersecurity</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">About me</div><h2>Curious by nature.<br>Builder by choice.</h2></div></div>
+        <div class="about-grid">
+          <div class="card">
+            <p>I enjoy turning ideas into useful digital projects and learning how technology works behind the scenes. I'm currently studying in Grade 10 and using my free time to build websites, experiment with AI and improve my programming skills.</p>
+            <p class="muted">My journey is still beginning, but every project gives me another reason to learn something new.</p>
+          </div>
+          <div class="card">
+            <h3>My direction</h3>
+            <p class="muted">Long-term goal: become a strong cybersecurity professional while continuing to build practical applications, websites and educational technology projects.</p>
+            <div class="stats"><div class="stat"><b>10</b><span class="muted">Grade</span></div><div class="stat"><b>AI</b><span class="muted">Exploring</span></div><div class="stat"><b>∞</b><span class="muted">Ideas</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Toolkit</div><h2>Skills I'm building</h2></div></div>
+        <div class="card"><div class="skills">
+          <span class="skill">Web Development</span><span class="skill">App Development</span><span class="skill">AI Tools</span><span class="skill">Programming</span><span class="skill">SEO</span><span class="skill">Responsive Design</span><span class="skill">Git &amp; GitHub</span><span class="skill">PostgreSQL</span><span class="skill">Cybersecurity</span><span class="skill">Content Creation</span>
+        </div></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects</h2></div><span class="muted">Replace these with your real projects anytime.</span></div>
+        <div class="project-grid">
+          <article class="card project"><div class="project-icon">🐾</div><span class="tag">Web App</span><h3>Home Vet Service</h3><p class="muted">A service website concept for home veterinary support, bookings, reviews and contact management.</p><a class="btn" href="https://hvs-home-vet-service.onrender.com/" target="_blank" rel="noopener">View project ↗</a></article>
+          <article class="card project"><div class="project-icon">▣</div><span class="tag">Web Tool</span><h3>QR Flow</h3><p class="muted">A QR-focused web project designed around generating and managing useful QR experiences.</p><a class="btn" href="https://qr-flow-8dox.onrender.com" target="_blank" rel="noopener">View project ↗</a></article>
+          <article class="card project"><div class="project-icon">✦</div><span class="tag">Technology</span><h3>More coming soon</h3><p class="muted">New experiments in AI, programming, websites and cybersecurity will appear here.</p><a class="btn" href="#contact">Suggest an idea</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Journal</div><h2>Latest thoughts</h2></div><span class="muted">AI · Technology · Programming</span></div>
+        <div class="blog-tools">
+          <input id="search" style="max-width:520px" placeholder="Search articles..." aria-label="Search articles">
+          <select id="category" style="max-width:210px"><option value="all">All categories</option><option>AI</option><option>Technology</option><option>Programming</option><option>Education</option><option>Nepal</option></select>
+        </div>
+        <div id="posts" class="blog-grid">
+          <article class="card post" data-category="AI" data-title="How I use AI as a student"><div class="post-cover">✦</div><span class="tag">AI</span><h3>How I use AI as a student</h3><div class="post-meta"><span>5 min read</span><span>Featured</span></div><p class="muted">A practical look at using AI as a learning companion without replacing your own thinking.</p><button class="btn like" data-key="ai-student">♡ Like <span>0</span></button></article>
+          <article class="card post" data-category="Programming" data-title="My journey into web development"><div class="post-cover">⌘</div><span class="tag">Programming</span><h3>My journey into web development</h3><div class="post-meta"><span>4 min read</span><span>New</span></div><p class="muted">What I'm learning while turning small ideas into real websites.</p><button class="btn like" data-key="web-journey">♡ Like <span>0</span></button></article>
+          <article class="card post" data-category="Technology" data-title="Why I want to learn cybersecurity"><div class="post-cover">⌁</div><span class="tag">Technology</span><h3>Why I want to learn cybersecurity</h3><div class="post-meta"><span>6 min read</span><span>Personal</span></div><p class="muted">The motivation behind my long-term technology goal and the skills I want to build.</p><button class="btn like" data-key="cyber-goal">♡ Like <span>0</span></button></article>
+        </div>
+        <div id="empty" class="empty">No articles match your search.</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head"><div><div class="kicker">Contact</div><h2>Have an idea?</h2></div></div>
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Let's connect</h3>
+            <p class="muted">For projects, collaboration, feedback or technology discussions, send me a message.</p>
+            <p><b>Email</b><br><a class="gradient" href="mailto:dipindrayadav100@gmail.com">dipindrayadav100@gmail.com</a></p>
+            <p><b>Phone / WhatsApp</b><br><a href="tel:+9779707425277">+977 9707425277</a></p>
+            <div class="socials">
+              <a class="social" href="https://www.facebook.com/share/1DrJTHSfxJ/" target="_blank" rel="noopener">Facebook</a>
+              <a class="social" href="https://www.linkedin.com/in/dipindra-yadav-a23305378" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="social" href="https://www.tiktok.com/@ym_forever1" target="_blank" rel="noopener">TikTok</a>
+            </div>
+          </div>
+          <form class="card form-grid" id="contactForm">
+            <input id="name" required placeholder="Your name">
+            <input id="email" required type="email" placeholder="Your email">
+            <textarea id="message" required placeholder="Your message"></textarea>
+            <button class="btn primary" type="submit">Open email app →</button>
+            <div class="notice">This static version uses your device's email app. A PostgreSQL contact form requires a backend/API.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container footer-row"><span>© <span id="year"></span> Dipindra Yadav (DY). All rights reserved.</span><span>Built with curiosity &amp; code.</span></div></footer>
+  <button class="btn backtop" id="top">↑</button>
+
+  <script>
+    const root=document.documentElement;
+    const saved=localStorage.getItem("dy-theme");
+    if(saved) root.dataset.theme=saved;
+    const theme=document.getElementById("theme");
+    function themeIcon(){theme.textContent=root.dataset.theme==="dark"?"☀":"☾"}
+    themeIcon();
+    theme.onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"light":"dark";localStorage.setItem("dy-theme",root.dataset.theme);themeIcon()};
+
+    document.getElementById("menu").onclick=()=>{
+      const links=document.querySelector(".links");
+      links.style.display=links.style.display==="flex"?"none":"flex";
+      links.style.position="absolute";links.style.top="68px";links.style.left="10px";links.style.right="10px";
+      links.style.padding="10px";links.style.flexDirection="column";links.style.background="var(--card)";
+      links.style.border="1px solid var(--line)";links.style.borderRadius="18px";
+    };
+
+    const search=document.getElementById("search"), category=document.getElementById("category"), cards=[...document.querySelectorAll(".post")], empty=document.getElementById("empty");
+    function filter(){const q=search.value.toLowerCase(),c=category.value;let shown=0;cards.forEach(x=>{const ok=x.dataset.title.toLowerCase().includes(q)&&(c==="all"||x.dataset.category===c);x.style.display=ok?"block":"none";if(ok)shown++});empty.style.display=shown?"none":"block"}
+    search.oninput=filter;category.onchange=filter;
+
+    document.querySelectorAll(".like").forEach(btn=>{
+      const key="dy-like-"+btn.dataset.key, n=localStorage.getItem(key)||0;btn.querySelector("span").textContent=n;
+      btn.onclick=()=>{const next=Number(localStorage.getItem(key)||0)+1;localStorage.setItem(key,next);btn.querySelector("span").textContent=next;btn.firstChild.textContent="♥ Like ";}
+    });
+
+    document.getElementById("contactForm").onsubmit=e=>{
+      e.preventDefault();
+      const name=encodeURIComponent(document.getElementById("name").value),email=encodeURIComponent(document.getElementById("email").value),msg=encodeURIComponent(document.getElementById("message").value);
+      location.href=`mailto:dipindrayadav100@gmail.com?subject=Website message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${msg}`;
+    };
+    document.getElementById("year").textContent=new Date().getFullYear();
+    const top=document.getElementById("top");window.onscroll=()=>top.classList.toggle("show",scrollY>500);top.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+  </script>
+</body>
+</html>
